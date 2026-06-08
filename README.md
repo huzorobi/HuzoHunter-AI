@@ -10,7 +10,7 @@
 
 ![Status](https://img.shields.io/badge/status-R%26D%20phase-FF6F00?style=for-the-badge)
 ![Local First](https://img.shields.io/badge/AI-Local%20%26%20Private-00E5FF?style=for-the-badge)
-![License](https://img.shields.io/badge/license-TBD-lightgrey?style=for-the-badge)
+![License](https://img.shields.io/badge/license-Apache%202.0-D22128?style=for-the-badge)
 ![Made by HuzoSecurity](https://img.shields.io/badge/by-HuzoSecurity%20Ltd-0A66C2?style=for-the-badge)
 
 [Website](https://huzosecurity.com) · [Vision](#-vision) · [Features](#-key-features) · [Stack](#-technology-stack) · [Roadmap](#-roadmap) · [Contact](#-contact)
