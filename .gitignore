@@ -1,0 +1,53 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# ---- Environment & secrets ----
+.env
+.env.*
+*.pem
+*.key
+secrets.*
+
+# ---- Testing & coverage ----
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ---- Logs & data ----
+*.log
+logs/
+data/
+*.sqlite3
+*.db
+
+# ---- Models & large artifacts (local LLMs) ----
+models/
+*.gguf
+*.bin
+*.safetensors
+*.pt
+*.onnx
+
+# ---- IDE / editor ----
+.vscode/
+.idea/
+*.swp
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+desktop.ini
