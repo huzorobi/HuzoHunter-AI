@@ -53,22 +53,31 @@ Cloud-based security tooling often means handing your most sensitive logs to a t
 
 ## 🏗️ Architecture
 
-```text
-                ┌──────────────────────────────────────────────┐
-                │              HuzoHunter AI (Local)            │
-                │                                               │
-   Data Sources │   ┌───────────┐   ┌───────────┐   ┌────────┐ │
-  ──────────────┼─▶ │  Wazuh    │─▶ │ OpenSearch │─▶ │ Local  │ │
-   AD · M365 ·  │   │ (EDR/SIEM)│   │  (Storage  │   │  LLM   │ │
-   Endpoints ·  │   └───────────┘   │  & Search) │   │ Engine │ │
-   Threat Intel │                   └─────┬──────┘   └───┬────┘ │
-                │                         │              │      │
-                │                   ┌─────▼──────────────▼────┐ │
-                │                   │  Grafana Dashboards &    │ │
-                │                   │  NL Query / Alerting     │ │
-                │                   └──────────────────────────┘ │
-                └──────────────────────────────────────────────┘
-                         🔒 All processing stays on-premises
+```mermaid
+flowchart LR
+    subgraph SRC["Data Sources"]
+        direction TB
+        AD["Active Directory"]
+        M365["Microsoft 365"]
+        EP["Endpoints"]
+        TI["Threat Intel"]
+    end
+
+    subgraph LOCAL["HuzoHunter AI — On-Premises (data stays local)"]
+        WZ["Wazuh<br/>EDR / SIEM"]
+        OS["OpenSearch<br/>Storage & Search"]
+        LLM["Local LLM<br/>Engine"]
+        GRAF["Grafana Dashboards<br/>NL Query & Alerting"]
+    end
+
+    AD --> WZ
+    M365 --> WZ
+    EP --> WZ
+    TI --> WZ
+    WZ --> OS
+    OS --> LLM
+    OS --> GRAF
+    LLM --> GRAF
 ```
 
 *Diagram is illustrative of the intended design during R&D.*
