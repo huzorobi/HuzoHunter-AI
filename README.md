@@ -8,6 +8,7 @@
 
 <br/>
 
+![Version](https://img.shields.io/badge/version-0.5.0-2EA043?style=for-the-badge)
 ![Status](https://img.shields.io/badge/status-R%26D%20phase-FF6F00?style=for-the-badge)
 ![Local First](https://img.shields.io/badge/AI-Local%20%26%20Private-00E5FF?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-Apache%202.0-D22128?style=for-the-badge)
