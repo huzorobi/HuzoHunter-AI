@@ -27,29 +27,18 @@
 
 ## Data Flow
 
-```text
-  Endpoints / AD / M365 / Threat Intel
-                │
-                ▼
-        ┌───────────────┐
-        │     Wazuh      │   collection + normalisation
-        └───────┬───────┘
-                ▼
-        ┌───────────────┐
-        │   OpenSearch   │   storage + indexing + search
-        └───────┬───────┘
-                ▼
-        ┌───────────────┐
-        │  Local LLM +   │   NL queries, explainable
-        │  Correlation   │   investigation, enrichment
-        └───────┬───────┘
-                ▼
-        ┌───────────────┐
-        │    Grafana     │   dashboards, monitoring, alerts
-        └───────────────┘
+```mermaid
+flowchart TB
+    SRC["Endpoints · AD · M365 · Threat Intel"]
+    WZ["Wazuh<br/>Collection & Normalisation"]
+    OS["OpenSearch<br/>Storage · Indexing · Search"]
+    AI["Local LLM + Correlation<br/>NL Queries · Explainable Investigation · Enrichment"]
+    GRAF["Grafana<br/>Dashboards · Monitoring · Alerts"]
 
-  🔒 Every stage runs on-premises / customer-controlled infrastructure.
+    SRC --> WZ --> OS --> AI --> GRAF
 ```
+
+> 🔒 Every stage runs on-premises / customer-controlled infrastructure.
 
 ## Technology Choices
 
