@@ -138,4 +138,6 @@ flowchart LR
 
 <div align="center">
 <sub>© 2026 HuzoSecurity Ltd · Built with a local-first, privacy-first philosophy 🔐</sub>
+<br/>
+<sub><strong>Version 0.5.0</strong> · Last updated 2026-06-10</sub>
 </div>
